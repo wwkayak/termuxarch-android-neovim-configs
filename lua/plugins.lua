@@ -5,13 +5,19 @@ return require('packer').startup(function(use)
   use('williamboman/mason-lspconfig.nvim')
   use('neovim/nvim-lspconfig')
   use('simrat39/rust-tools.nvim')
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use 'nvim-tree/nvim-web-devicons'
+
+
 
 end)
