@@ -4,8 +4,15 @@ return require('packer').startup(function(use)
   use('williamboman/mason.nvim')
   use('williamboman/mason-lspconfig.nvim')
   use('neovim/nvim-lspconfig')
-  use('simrat39/rust-tools.nvim')
-
+--  use('nvim-tree/nvim-web-devicons')
+  --  use('simrat39/rust-tools.nvim')
+  -- use('vim-airline/vim-airline')
+  use('morhetz/gruvbox')
+  use('folke/tokyonight.nvim')
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons'}
+}
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -16,7 +23,6 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use 'nvim-tree/nvim-web-devicons'
 
 
 
