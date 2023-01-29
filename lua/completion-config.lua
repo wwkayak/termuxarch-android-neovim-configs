@@ -1,4 +1,3 @@
--- Follwing TJs Tech Tuesday vim-cmp
 local cmp = require('cmp')
 cmp.setup {
   sources = {
@@ -22,12 +21,22 @@ cmp.setup {
 	['<CR>'] = cmp.mapping.confirm({ select = true }),
 
   },
+  window = {
+	completion = {
+		--border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║"},
+		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│"},
+   	},
+	documentation = {
+		border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║"},
+   	},
+  },
 }
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig').sumneko_lua.setup {
-    capabilities = capabilities
-  }
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig').sumneko_lua.setup {
+  capabilities = capabilities
+ }
 
 
 

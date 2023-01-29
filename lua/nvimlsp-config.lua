@@ -1,12 +1,35 @@
 -- Bare bones (default) nvimlsp server
 --
---This basically connects to the golsp server, bit does it start it?
--- We can verify this by opening a "go" file in nvim and running LspInfo
+--LUA--
+require('lspconfig').sumneko_lua.setup{
+  settings = {
+    Lua = {
+      runtime = {
+        -- tell the language server which version of lua you're using (most likely luajit in the case of neovim)
+        version = "luajit",
+        -- setup your lua path
+      },
+      diagnostics = {
+        -- get the language server to recognize the `vim` global
+        globals = { 'vim' },
+      },
+      workspace = {
+        -- make the server aware of neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
 
--- require('lspconfig').gopls.setup{}
+local runtime_path = vim.split(package.path, ";")
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
 
-
--- addimg some more configuration options
+--GO--
 require('lspconfig').gopls.setup{
     on_attach = function()
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
@@ -19,34 +42,4 @@ require('lspconfig').gopls.setup{
     end,
 }
 
-
-  local runtime_path = vim.split(package.path, ";")
-  table.insert(runtime_path, "lua/?.lua")
-  table.insert(runtime_path, "lua/?/init.lua")
-
-require('lspconfig').sumneko_lua.setup({
-
-
-  settings = {
-    Lua = {
-      runtime = {
-        -- tell the language server which version of lua you're using (most likely luajit in the case of neovim)
-        version = "luajit",
-        -- setup your lua path
-      },
-      diagnostics = {
-        -- get the language server to recognize the `vim` global
-        globals = { "vim" },
-      },
-      workspace = {
-        -- make the server aware of neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      -- do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-})
 
