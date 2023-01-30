@@ -11,7 +11,7 @@ require('lspconfig').sumneko_lua.setup{
       },
       diagnostics = {
         -- get the language server to recognize the `vim` global
-        globals = { 'vim' },
+        globals = { "vim" },
       },
       workspace = {
         -- make the server aware of neovim runtime files
@@ -21,6 +21,7 @@ require('lspconfig').sumneko_lua.setup{
       telemetry = {
         enable = false,
       },
+
     },
   },
 }
@@ -28,6 +29,7 @@ require('lspconfig').sumneko_lua.setup{
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
+
 
 --GO--
 require('lspconfig').gopls.setup{

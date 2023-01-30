@@ -11,5 +11,5 @@ require('lualine-config')
 require('telescope-config')
 require('neogit-config')
 require('nvim-surround').setup()
-require('completion-config')
+require('nvim-cmp-config')
 

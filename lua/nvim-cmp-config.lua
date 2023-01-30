@@ -1,17 +1,20 @@
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 local cmp = require('cmp')
 cmp.setup {
+  capabilities = capabilities,
   sources = {
-	  {name = "nvim_lsp"},
 	  {name = "nvim_lua"},
-	  {name = "buffer"},
+	  {name = "nvim_lsp"},
+	  {name = "nvim-cmp"},
 	  {name = "path"},
 	  {name = "luasnip"},
+	  {name = "buffer"},
   },
   snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
         require('luasnip').lsp_expand(args.body)
-      -- For `luasnip` users.
       end,
   },
   mapping = {
@@ -31,12 +34,6 @@ cmp.setup {
    	},
   },
 }
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig').sumneko_lua.setup {
-  capabilities = capabilities
- }
 
 
 
