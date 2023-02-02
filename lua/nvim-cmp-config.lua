@@ -65,7 +65,7 @@ cmp.setup {
 
       return vim_item
     end
-    },
+  },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_next_item(),
     ["<C-j>"] = cmp.mapping.select_prev_item(),

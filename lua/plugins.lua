@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons'}
+    requires = { 'kyazdani42/nvim-web-devicons' }
   }
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -16,29 +16,30 @@ return require('packer').startup(function(use)
   }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = {'nvim-lua/plenary.nvim'} 
+    requires = { 'nvim-lua/plenary.nvim' }
   }
   use {
-    'nvim-telescope/telescope-fzf-native.nvim', 
-	  run = 'make' 
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make'
   }
-  use { 
-    'TimUntersberger/neogit', 
-    requires = 'nvim-lua/plenary.nvim' 
+  use {
+    'TimUntersberger/neogit',
+    requires = 'nvim-lua/plenary.nvim'
   }
   use {
     'nvim-tree/nvim-tree.lua',
-    requires = {'nvim-tree/nvim-web-devicons'}, -- optional, for file icons
+    requires = { 'nvim-tree/nvim-web-devicons' }, -- optional, for file icons
   }
-  use  'kylechui/nvim-surround'
+  use 'kylechui/nvim-surround'
 
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lua'
-  use 'saadparwaiz1/cmp_luasnip' 
+  use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
   use 'onsails/lspkind.nvim'
-end)
 
+  use 'lewis6991/gitsigns.nvim'
+end)
