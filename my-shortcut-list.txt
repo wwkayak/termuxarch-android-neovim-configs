@@ -1,0 +1,12 @@
+G - keys
+  gU 
+    gU ... Pending Mode ... iw (allcaps current word)
+    gu (lowercase)
+
+  ga  -- Display dec / hex /octal of a character under cursor 
+
+<leader>t -- Toggle NvimTree
+
+<leader>gd goto definition
+<leader>gt goto type_definition
+<leader>gi goto implementation

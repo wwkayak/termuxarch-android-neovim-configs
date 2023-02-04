@@ -1,11 +1,14 @@
+
 local options = {
   termguicolors = true,
-  --  clipboard+=unnamedplus,
   laststatus = 3,
   expandtab = true,
   smartindent = true,
   tabstop = 2,
   shiftwidth = 2,
+  undofile=true,
+  undodir='~/.vim/undo',
+  undolevels=1000,
 }
 
 function Hank(option)

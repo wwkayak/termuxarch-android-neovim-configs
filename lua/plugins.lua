@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'morhetz/gruvbox'
   use 'folke/tokyonight.nvim'
+  use 'junegunn/fzf.vim'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
@@ -39,7 +40,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lua'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
-  use 'onsails/lspkind.nvim'
 
   use 'lewis6991/gitsigns.nvim'
+  use 'mbbill/undotree'
 end)
