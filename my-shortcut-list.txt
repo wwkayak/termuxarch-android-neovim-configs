@@ -1,12 +1,25 @@
+Folding(type zR now!): see foldmethod in nvim help (manual, indent, markers, etc)
+  z keys - lowercase for 1 level, caps for nested folds too.
+  zA - toggle all (open and close)
+  zR - open all
+  zM - close all
+  zj - jump to next fold
+  zk - jump to prev fold
+  
 G - keys
-  gU 
+  gU - change case 
     gU ... Pending Mode ... iw (allcaps current word)
     gu (lowercase)
 
   ga  -- Display dec / hex /octal of a character under cursor 
+
+Spelling? check it again with vim option versus LSP extensions????
+
 
 <leader>t -- Toggle NvimTree
 
 <leader>gd goto definition
 <leader>gt goto type_definition
 <leader>gi goto implementation
+
+

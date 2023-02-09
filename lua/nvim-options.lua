@@ -8,7 +8,13 @@ local options = {
   undofile=true,
   undodir='~/.vim/undo',
   undolevels=1000,
+  number = true,
+  foldmethod = "indent",
+  spell = true,
+  spelllang="en_us",
+  -- binccommand = "split",
 }
+
 
 function Hank(option)
   print(option)

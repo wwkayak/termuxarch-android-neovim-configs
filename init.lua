@@ -1,4 +1,6 @@
 vim.g.mapleader=" "
+vim.g.netrw_http_cmd='elinks'
+vim.g.netrw_http_xcmd= "-dump >"
 
 vim.cmd[[colorscheme tokyonight]]
 
