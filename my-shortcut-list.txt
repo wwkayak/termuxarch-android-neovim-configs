@@ -1,3 +1,5 @@
+:h *g* - to show help for all vim shortcuts
+
 Folding(type zR now!): see foldmethod in nvim help (manual, indent, markers, etc)
   z keys - lowercase for 1 level, caps for nested folds too.
   zA - toggle all (open and close)
@@ -5,7 +7,14 @@ Folding(type zR now!): see foldmethod in nvim help (manual, indent, markers, etc
   zM - close all
   zj - jump to next fold
   zk - jump to prev fold
+
+Navigation / Moves
   
+  } - next whitespace paragraph - '3{' jump 3 paragraphs
+  { - prev
+
+  gg - top
+  G - bottom
 G - keys
   gU - change case 
     gU ... Pending Mode ... iw (allcaps current word)
@@ -13,7 +22,17 @@ G - keys
 
   ga  -- Display dec / hex /octal of a character under cursor 
 
-Spelling? check it again with vim option versus LSP extensions????
+V - keys
+  v% - visual selection between braces / parenthesis / etc
+  v%d - select, delete
+
+Z - keys
+  z= Spelling suggestions
+  zR - expand all folds
+  zM - collapse all folds
+  za - toggle current fold
+  
+Spelling?( see z= above) check it again with vim option versus LSP extensions????
 
 
 <leader>t -- Toggle NvimTree

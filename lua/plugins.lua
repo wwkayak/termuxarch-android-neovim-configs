@@ -6,6 +6,8 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'morhetz/gruvbox'
   use 'folke/tokyonight.nvim'
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
   use 'junegunn/fzf.vim'
   use {
     'nvim-lualine/lualine.nvim',

@@ -67,8 +67,8 @@ cmp.setup {
     end
   },
   mapping = {
-    ["<C-k>"] = cmp.mapping.select_next_item(),
-    ["<C-j>"] = cmp.mapping.select_prev_item(),
+    ["<C-l>"] = cmp.mapping.select_next_item(),
+    ["<C-h>"] = cmp.mapping.select_prev_item(),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
