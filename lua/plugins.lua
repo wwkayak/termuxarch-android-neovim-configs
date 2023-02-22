@@ -6,13 +6,20 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'morhetz/gruvbox'
   use 'folke/tokyonight.nvim'
+  -- DAP Stuff
+  use 'folke/neodev.nvim'
   use 'mfussenegger/nvim-dap'
+  use 'jbyuki/one-small-step-for-vimkind'
   use 'rcarriga/nvim-dap-ui'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use 'theHamsta/nvim-dap-virtual-text'
+
   use 'junegunn/fzf.vim'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
+  use 'nanozuki/tabby.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -34,7 +41,7 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' }, -- optional, for file icons
   }
   use 'kylechui/nvim-surround'
-
+-- code completion stuff
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'

@@ -1,11 +1,11 @@
 local options = {
   termguicolors = true,
   laststatus = 3,
-  expandtab = true,
+  expandtab = true, --spaces, not TABS
   smartindent = true,
   tabstop = 2,
-  shiftwidth = 2,
-  undofile=true,
+  shiftwidth = 2, --tabstop
+  undofile=true, --persistent undo
   undodir="/home/tom/.vim/undo",
   undolevels=1000,
   number = true,
@@ -13,6 +13,7 @@ local options = {
   spell = true,
   spelllang="en_us",
   -- binccommand = "split",
+  showtabline = 2
 }
 
 
@@ -24,8 +25,3 @@ for k, v in pairs(options) do
   vim.opt[k] = v
   --  Hank(k)
 end
-
-vim.keymap.set('n', '<Up>', '<Nop>', { noremap = true })
-vim.keymap.set('n', '<Down>>', '<Nop>', { noremap = true })
-vim.keymap.set('n', '<Left`>', '<Nop>', { noremap = true })
-vim.keymap.set('n', '<Right>', '<Nop>', { noremap = true })
