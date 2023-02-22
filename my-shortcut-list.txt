@@ -41,4 +41,13 @@ Spelling?( see z= above) check it again with vim option versus LSP extensions???
 <leader>gt goto type_definition
 <leader>gi goto implementation
 
+Window Navigation:
+  <C-w>T - move current buffer to a TAB
+  <C-w>+ - add height to Window 
+  <C-w>- - del height from Window 
+  <C-w>= - reset height of Window 
 
+FZF - Fuzzy Finder
+  BASH:
+
+  NVIM:
