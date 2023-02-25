@@ -11,14 +11,14 @@ It all seems to be working  well:
 * Code Completion: nvim-cmp
 * DAP Debugging: nvim-dap, one-small-step-for-vimkind(osv), nvim-dap-ui
 
-![Debugging](images/nvim-android-debug.jpg?raw=true)
-Debugging in Neovim with TermuxArch on Android
-![DAP Config](images/nvim-android-config.jpg?raw=true)
-DAP setup in Neovim with TermuxArch on Android
-
-
-
 <div align="center">
+
+<sub>Debugging in Neovim with TermuxArch on Android</sub>
+![Debugging](images/nvim-android-debug.jpg?raw=true)
+
+<sub>DAP setup in Neovim with TermuxArch on Android</sub>
+![DAP Config](images/nvim-android-config.jpg?raw=true)
+
 
 #### packer.nvim - Total plugins: 32
 
