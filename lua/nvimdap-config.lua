@@ -1,6 +1,16 @@
-------------------------------------------------------------
--- LUA debugger / adapter configuration (nlua = neovim lua,
--- which uses one-small-step-for-vimkind as adapter)
+-- LUA --
+local dap = require('dap')
+dap.configurations.lua = {
+  {
+    type = 'nlua',
+    request = 'attach',
+    name = "Attach to running Neovim instance",
+  }
+}
+dap.adapters.nlua = function(callback, config)
+  callback({ type = 'server', host = config.host or "127.0.0.1", port = config.port or 8086 })
+end
+
 vim.api.nvim_set_hl(0, 'DapBreakpoint', { ctermbg = 0, fg = '#fb6666', bg = '#303545' })
 vim.api.nvim_set_hl(0, 'DapLogPoint', { ctermbg = 0, fg = '#61afef', bg = '#31353f' })
 vim.api.nvim_set_hl(0, 'DapStopped', { ctermbg = 0, fg = '#98f379', bg = '#31353f' })
@@ -16,10 +26,7 @@ for sign, opts in pairs(signs) do
   vim.fn.sign_define(sign, opts)
 end
 
-local dap = require('dap')
-
-local dapui = require('dapui').setup(
-{
+local dapui = require('dapui').setup({
   icons = { expanded = "", collapsed = "", current_frame = "" },
   mappings = {
     -- Use a table to apply multiple mappings
@@ -29,14 +36,6 @@ local dapui = require('dapui').setup(
     edit = "e",
     repl = "r",
     toggle = "t",
-  },
-  -- Use this to override mappings for specific elements
-  element_mappings = {
-    -- Example:
-    -- stacks = {
-    --   open = "<CR>",
-    --   expand = "o",
-    -- }
   },
   -- Expand lines larger than the window
   -- Requires >= 0.7
@@ -74,140 +73,7 @@ local dapui = require('dapui').setup(
     max_value_lines = 100, -- Can be integer or nil.
   }
 })
---[[
-  {
-    controls = {
-      element = "repl",
-      enabled = true,
-      icons = {
-        disconnect = "",
-        pause = "",
-        play = "",
-        run_last = "",
-        step_back = "",
-        step_into = "",
-        step_out = "",
-        step_over = "",
-        terminate = ""
-      }
-    },
-    element_mappings = {},
-    expand_lines = true,
-    floating = {
-      border = "single",
-      mappings = {
-        close = { "q", "<Esc>" }
-      }
-    },
-    force_buffers = true,
-    icons = {
-      collapsed = "",
-      current_frame = "",
-      expanded = ""
-    },
-    layouts = {
-      elements = {
-        { id = "scopes", size = 0.50 },
-        { id = "breakpoints", size = 0.20 },
-        { id = "stacks", size = 0.20 },
-        { id = "watches", size = 0.10 },
-        position = "left",
-        size = 30
-      },
-      elements = {
-        { id = "repl", size = 0.5 },
-        { id = "console", size = 0.5 },
-        position = "bottom",
-        size = 10
-      },
-    },
-    mappings = {
-      edit = "e",
-      expand = { "<CR>", "<2-LeftMouse>" },
-      open = "o",
-      remove = "d",
-      repl = "r",
-      toggle = "t"
-    },
-    render = {
-      indent = 1,
-      max_value_lines = 100
-    }
-  }
-)
---]]
---[[
-  {
-    controls = {
-      element = "repl",
-      enabled = true,
-      icons = {
-        disconnect = "",
-        pause = "",
-        play = "",
-        run_last = "",
-        step_back = "",
-        step_into = "",
-        step_out = "",
-        step_over = "",
-        terminate = ""
-      }
-    },
-    element_mappings = {},
-    expand_lines = true,
-    floating = {
-      border = "single",
-      mappings = {
-        close = { "q", "<Esc>" }
-      }
-    },
-    force_buffers = true,
-    icons = {
-      collapsed = "",
-      current_frame = "",
-      expanded = ""
-    },
-    layouts = { {
-        elements = { {
-            id = "scopes",
-            size = 0.60
-          }, {
-            id = "breakpoints",
-            size = 0.20
-          }, {
-            id = "stacks",
-            size = 0.20
-          },
-        position = "left",
-        size = 30
-      },
-    mappings = {
-      edit = "e",
-      expand = { "<CR>", "<2-LeftMouse>" },
-      open = "o",
-      remove = "d",
-      repl = "r",
-      toggle = "t"
-    },
-    render = {
-      indent = 1,
-      max_value_lines = 100
-    },
-  } },
-}
---]]
-dap.configurations.lua = {
-  {
-    type = 'nlua',
-    request = 'attach',
-    name = "Attach to running Neovim instance",
-  }
-}
--- nlua server "type" won't work for termux/arch, but this is is still needed with osv.start_this(),
--- which starts a server in BG and connects to it.
-dap.adapters.nlua = function(callback, config)
-  callback({ type = 'server', host = config.host or "127.0.0.1", port = config.port or 8086 })
-end
+
 
 --[[
 dap.listeners.after.event_initialized["dapui_config"] = function()
