@@ -14,7 +14,7 @@ other than some weird quirks that I am assuming is because it's ON My PHONE! ;)
 
 </div>
 
-* Neovim Language Server (bultin LSP): with [LuaLs](https://github.com/LuaLS/lua-language-server) laguage server 
+* Neovim Language Server (bultin LSP): with [LuaLs](https://github.com/LuaLS/lua-language-server) language server (formerly Sumneko_lua) 
 * Code Completion: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 * DAP Debugging:
   * [nvim-dap](https://github.com/mfussenegger/nvim-dap)
