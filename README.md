@@ -11,8 +11,8 @@ It all seems to be working  well:
 * Code Completion: nvim-cmp
 * DAP Debugging: nvim-dap, one-small-step-for-vimkind(osv), nvim-dap-ui
 
-![Debugging](https://github.com/wwkayak/NeoVimConfiguration/blob/master/Screenshot_20230225-002117_Termux.jpg?raw=true)
-![DAP Config](https://github.com/wwkayak/NeoVimConfiguration/blob/master/Screenshot_20230225-003251_Termux.jpg?raw=true)
+![Debugging](images/nvim-android-debug.jpg?raw=true)
+![DAP Config](images/nvim-android-config.jpg?raw=true)
 
 
                 packer.nvim - Total plugins: 32
