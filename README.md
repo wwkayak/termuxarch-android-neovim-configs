@@ -15,36 +15,39 @@ It all seems to be working  well:
 ![DAP Config](images/nvim-android-config.jpg?raw=true)
 
 
-                packer.nvim - Total plugins: 32
- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-* • LuaSnip
-* • cmp-buffer
-* • cmp-nvim-lsp
-* • cmp-nvim-lua
-* • cmp-path
-* • cmp_luasnip
-* • fzf.vim
-* • gitsigns.nvim
-* • lualine.nvim
-* • mason-lspconfig.nvim
-* • mason.nvim
-* • neodev.nvim
-* • neogit
-* • nvim-cmp
-* • nvim-dap
-* • nvim-dap-ui
-* • nvim-dap-virtual-text
-* • nvim-lspconfig
-* • nvim-surround
-* • nvim-tree.lua
-* • nvim-treesitter
-* • nvim-web-devicons
-* • one-small-step-for-vimkind
-* • packer.nvim
-* • plenary.nvim
-* • tabby.nvim
-* • telescope-dap.nvim
-* • telescope-fzf-native.nvim
-* • telescope.nvim
-* • tokyonight.nvim
-* • undotree
+<div style="text-align: center;">
+
+      packer.nvim - Total plugins: 32
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+* LuaSnip
+* cmp-buffer
+* cmp-nvim-lsp
+* cmp-nvim-lua
+* cmp-path
+* cmp_luasnip
+* fzf.vim
+* gitsigns.nvim
+* lualine.nvim
+* mason-lspconfig.nvim
+* mason.nvim
+* neodev.nvim
+* neogit
+* nvim-cmp
+* nvim-dap
+* nvim-dap-ui
+* nvim-dap-virtual-text
+* nvim-lspconfig
+* nvim-surround
+* nvim-tree.lua
+* nvim-treesitter
+* nvim-web-devicons
+* one-small-step-for-vimkind
+* packer.nvim
+* plenary.nvim
+* tabby.nvim
+* telescope-dap.nvim
+* telescope-fzf-native.nvim
+* telescope.nvim
+* tokyonight.nvim
+* undotree
+</div>
