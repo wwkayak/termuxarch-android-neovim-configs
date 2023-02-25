@@ -21,35 +21,35 @@ It all seems to be working  well:
 
 
 <p align="left"> LuaSnip</p>
-* cmp-buffer
-* cmp-nvim-lsp
-* cmp-nvim-lua
-* cmp-path
-* cmp_luasnip
-* fzf.vim
-* gitsigns.nvim
-* lualine.nvim
-* mason-lspconfig.nvim
-* mason.nvim
-* neodev.nvim
-* neogit
-* nvim-cmp
-* nvim-dap
-* nvim-dap-ui
-* nvim-dap-virtual-text
-* nvim-lspconfig
-* nvim-surround
-* nvim-tree.lua
-* nvim-treesitter
-* nvim-web-devicons
-* one-small-step-for-vimkind
-* packer.nvim
-* plenary.nvim
-* tabby.nvim
-* telescope-dap.nvim
-* telescope-fzf-native.nvim
-* telescope.nvim
-* tokyonight.nvim
-* undotree
+<p align="left"> cmp-buffer </p> 
+<p align="left"> cmp-nvim-lsp </p> 
+<p align="left"> cmp-nvim-lua </p> 
+<p align="left"> cmp-path </p> 
+<p align="left"> cmp_luasnip </p> 
+<p align="left"> fzf.vim </p> 
+<p align="left"> gitsigns.nvim </p> 
+<p align="left"> lualine.nvim </p> 
+<p align="left"> mason-lspconfig.nvim </p> 
+<p align="left"> mason.nvim </p> 
+<p align="left"> neodev.nvim </p> 
+<p align="left"> neogit </p> 
+<p align="left"> nvim-cmp </p> 
+<p align="left"> nvim-dap </p> 
+<p align="left"> nvim-dap-ui </p> 
+<p align="left"> nvim-dap-virtual-text </p> 
+<p align="left"> nvim-lspconfig </p> 
+<p align="left"> nvim-surround </p> 
+<p align="left"> nvim-tree.lua </p> 
+<p align="left"> nvim-treesitter </p> 
+<p align="left"> nvim-web-devicons </p> 
+<p align="left"> one-small-step-for-vimkind </p> 
+<p align="left"> packer.nvim </p> 
+<p align="left"> plenary.nvim </p> 
+<p align="left"> tabby.nvim </p> 
+<p align="left"> telescope-dap.nvim </p> 
+<p align="left"> telescope-fzf-native.nvim </p> 
+<p align="left"> telescope.nvim </p> 
+<p align="left"> tokyonight.nvim </p> 
+<p align="left"> undotree </p> 
 
 </div>
