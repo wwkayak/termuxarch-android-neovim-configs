@@ -4,13 +4,6 @@ DON'T USE THIS I HAVE NO CLUE WHAT IM DOING YET 😀
 
 So far I've really only setup everything for Lua, but it seems to be working,
 other than some weird quirks that I am assuming is because it's ON My PHONE! ;)
-
-It all seems to be working  well:
-
-* Neovim Language Server: Lua_Ls 
-* Code Completion: nvim-cmp
-* DAP Debugging: nvim-dap, one-small-step-for-vimkind(osv), nvim-dap-ui
-
 <div align="center">
 
 <sub>Debugging in Neovim with TermuxArch on Android</sub>
@@ -19,10 +12,34 @@ It all seems to be working  well:
 <sub>DAP setup in Neovim with TermuxArch on Android</sub>
 ![DAP Config](images/nvim-android-config.jpg?raw=true)
 
+</div>
+
+* Neovim Language Server (bultin LSP): with [LuaLs](https://github.com/LuaLS/lua-language-server) laguage server 
+* Code Completion: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+* DAP Debugging:
+  * [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+  * [one-small-step-for-vimkind(osv)](https://github.com/jbyuki/one-small-step-for-vimkind) 
+  * [nvim-dap-ui](https://github.com/mfussenegger/nvim-dap)
+<br/>
+<br/>
+
+The biggest issue(s), so far, are related to Debugging:
+* I can't "launch" the [one-small-step-for-vimkind(osv)](https://github.com/jbyuki/one-small-step-for-vimkind) lua debug adapteer as a server 
+and connect to it later. I have use the alternate method of calling osv.run_this(),
+which lanches the adapter, and connects to it.
+* The [nvim-dap](https://github.com/mfussenegger/nvim-dap) event callbacks don't seem to work (could be me). This means I 
+need to do everything "manually":
+  * start the osv/nvim-dap lua adapter/client
+  * open nvim-dap-ui
+    * ... debug code ...
+  * close nvim-dap-ui
+  * disconnect dap client
+
+<div align="center">
 
 #### packer.nvim - Total plugins: 32
 
-<div align="center">
+**_TODO_** add plugin urls
 <p align="left"> LuaSnip</p>
 <p align="left"> cmp-buffer </p> 
 <p align="left"> cmp-nvim-lsp </p> 
