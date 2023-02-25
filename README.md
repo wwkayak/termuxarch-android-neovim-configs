@@ -15,11 +15,12 @@ It all seems to be working  well:
 ![DAP Config](images/nvim-android-config.jpg?raw=true)
 
 
-<div style="text-align: center;">
+<div align="center">
 
-      packer.nvim - Total plugins: 32
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-* LuaSnip
+#### packer.nvim - Total plugins: 32
+
+
+<p align="left"> LuaSnip</p>
 * cmp-buffer
 * cmp-nvim-lsp
 * cmp-nvim-lua
@@ -50,4 +51,5 @@ It all seems to be working  well:
 * telescope.nvim
 * tokyonight.nvim
 * undotree
+
 </div>
