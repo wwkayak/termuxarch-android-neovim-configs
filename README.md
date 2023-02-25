@@ -19,7 +19,7 @@ It all seems to be working  well:
 
 #### packer.nvim - Total plugins: 32
 
-
+<div align="center">
 <p align="left"> LuaSnip</p>
 <p align="left"> cmp-buffer </p> 
 <p align="left"> cmp-nvim-lsp </p> 
@@ -51,5 +51,5 @@ It all seems to be working  well:
 <p align="left"> telescope.nvim </p> 
 <p align="left"> tokyonight.nvim </p> 
 <p align="left"> undotree </p> 
-
+</div>
 </div>
