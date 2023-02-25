@@ -4,6 +4,7 @@ local options = {
   expandtab = true, --spaces, not TABS
   smartindent = true,
   tabstop = 2,
+  textwidth = 80,
   shiftwidth = 2, --tabstop
   undofile=true, --persistent undo
   undodir="/home/tom/.vim/undo",

@@ -4,12 +4,12 @@ require('lualine').setup {
     theme = 'tokyonight'
     -- ... your lualine config
   },
---[[
+---[[
   tabline = {
     lualine_a = {
       {
         'tabs',
-        max_length = vim.o.columns / 3,
+        max_length = vim.o.columns,
         mode = 2,
       }
     },
@@ -19,5 +19,7 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {},
   },
+
+  extension = {"nvim-dap-ui"}
   --]]
 }
