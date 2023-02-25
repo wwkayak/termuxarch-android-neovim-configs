@@ -21,19 +21,23 @@ other than some weird quirks that I am assuming is because it's ON My PHONE! ;)
   * [one-small-step-for-vimkind(osv)](https://github.com/jbyuki/one-small-step-for-vimkind) 
   * [nvim-dap-ui](https://github.com/mfussenegger/nvim-dap)
 <br/>
-<br/>
+
+---
 
 The biggest issue(s), so far, are related to Debugging:
 * I can't "launch" the [one-small-step-for-vimkind(osv)](https://github.com/jbyuki/one-small-step-for-vimkind) lua debug adapteer as a server 
 and connect to it later. I have use the alternate method of calling osv.run_this(),
 which lanches the adapter, and connects to it.
 * The [nvim-dap](https://github.com/mfussenegger/nvim-dap) event callbacks don't seem to work (could be me). This means I 
-need to do everything "manually":
-  * start the osv/nvim-dap lua adapter/client
-  * open nvim-dap-ui
+need to do everything "manually": 
+  * start the osv/nvim-dap lua adapter/client \<F5\>
+  * open nvim-dap-ui \<F6\>
     * ... debug code ...
-  * close nvim-dap-ui
-  * disconnect dap client
+  * close nvim-dap-ui \<F7\>
+  * disconnect dap client \<F12\>
+<br/>
+
+---
 
 <div align="center">
 
