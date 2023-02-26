@@ -19,7 +19,10 @@ other than some weird quirks that I am assuming is because it's ON My PHONE! ;)
 * DAP Debugging:
   * [nvim-dap](https://github.com/mfussenegger/nvim-dap)
   * [one-small-step-for-vimkind(osv)](https://github.com/jbyuki/one-small-step-for-vimkind) 
-  * [nvim-dap-ui](https://github.com/mfussenegger/nvim-dap)
+  * [<strike>nvim-dap-ui</strike>](https://github.com/mfussenegger/nvim-dap) Switched to [dap-ui.nvim](https://github.com/sar/dap-ui.nvim)
+  * [dap-ui.nvim](https://github.com/sar/dap-ui.nvim)
+    * I switched to this fork of nvim-dap-ui because there seems to be more activity. The original author of nvim-dap-ui seems to be making commits in this fork too.
+    * Not much has to change in the configuration. Just the plugin loaded by packer.
 <br/>
 
 ---
@@ -31,9 +34,9 @@ which lanches the adapter, and connects to it.
 * The [nvim-dap](https://github.com/mfussenegger/nvim-dap) event callbacks don't seem to work (could be me). This means I 
 need to do everything "manually": 
   * start the osv/nvim-dap lua adapter/client \<F5\>
-  * open nvim-dap-ui \<F6\>
+  * open dapui \<F6\>
     * ... debug code ...
-  * close nvim-dap-ui \<F7\>
+  * close dapui \<F7\>
   * disconnect dap client \<F12\>
 <br/>
 
@@ -59,7 +62,7 @@ need to do everything "manually":
 <p align="left"> neogit </p> 
 <p align="left"> nvim-cmp </p> 
 <p align="left"> nvim-dap </p> 
-<p align="left"> nvim-dap-ui </p> 
+<p align="left"> dap-ui </p> 
 <p align="left"> nvim-dap-virtual-text </p> 
 <p align="left"> nvim-lspconfig </p> 
 <p align="left"> nvim-surround </p> 
