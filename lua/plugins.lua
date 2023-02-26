@@ -10,7 +10,8 @@ return require('packer').startup(function(use)
   use 'folke/neodev.nvim'
   use 'mfussenegger/nvim-dap'
   use 'jbyuki/one-small-step-for-vimkind'
-  use 'rcarriga/nvim-dap-ui'
+--  use 'rcarriga/nvim-dap-ui'
+  use 'sar/dap-ui.nvim'
   use 'nvim-telescope/telescope-dap.nvim'
   use 'theHamsta/nvim-dap-virtual-text'
 

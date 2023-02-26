@@ -4,15 +4,12 @@ vim.g.netrw_http_xcmd= "-dump >"
 
 vim.api.nvim_exec("autocmd TermOpen * startinsert", false)
 
-vim.cmd[[colorscheme tokyonight]]
-
+require('tokyonights-config')
 require('nvim-options')
 require('nvim-global-keymaps')
 require('plugins')
 require('mason-config')
-require("neodev").setup({
-  library = { plugins = { "nvim-dap-ui" }, types = true },
-})
+require('neodev-config')
 require('nvimlsp-config')
 require('nvim-diagnostics')
 require('lualine-config')
@@ -25,7 +22,8 @@ require('gitsigns').setup()
 require('luasnip-config')
 require('nvimdap-config')
 require('nvim-dap-virtual-text').setup{enabled=true,}
---require('tabby-config')
+
+vim.cmd[[colorscheme tokyonight]]
 
 
 
