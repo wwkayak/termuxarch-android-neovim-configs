@@ -31,6 +31,6 @@ vim.api.nvim_set_keymap('n', '<F11>', [[:lua require"dap".step_into()<CR>]], { n
 --vim.api.nvim_set_keymap('n', '<F5>', [[:lua require"osv".launch({port = 8086})<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<F5>', [[:lua require"osv".run_this()<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<F6>', [[:lua require"dapui".open()<CR>]], { noremap = true })
-vim.api.nvim_set_keymap('n', '<F7>', [[:lua require"dap".disconnect()<CR>]], { noremap = true })
-vim.api.nvim_set_keymap('n', '<F12>', [[:lua require"dapui".close()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<F7>', [[:lua require"dapui".close()<CR>]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<F12>', [[:lua require"dap".disconnect()<CR>]], { noremap = true })
 
