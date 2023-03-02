@@ -20,6 +20,7 @@ require('nvim-cmp-config')
 require('nvim-tree-config')
 require('gitsigns').setup()
 require('luasnip-config')
+require('luasnip')
 require('nvimdap-config')
 require('nvim-dap-virtual-text').setup{enabled=true,}
 

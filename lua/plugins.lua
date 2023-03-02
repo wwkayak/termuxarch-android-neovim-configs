@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
   use 'sar/dap-ui.nvim'
   use 'nvim-telescope/telescope-dap.nvim'
   use 'theHamsta/nvim-dap-virtual-text'
-
   use 'junegunn/fzf.vim'
   use {
     'nvim-lualine/lualine.nvim',
@@ -49,8 +48,13 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-nvim-lua'
   use 'saadparwaiz1/cmp_luasnip'
-  use 'L3MON4D3/LuaSnip'
-
+  use({
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    tag = "v1.2.1",
+    -- install jsregexp (optional!:).
+    run = "make install_jsregexp"
+  })
   use 'lewis6991/gitsigns.nvim'
   use 'mbbill/undotree'
 end)

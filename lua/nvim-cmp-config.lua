@@ -1,7 +1,6 @@
 --[[
 --Note: that thes lua settings will meaningfully increase the time until lua-language-server can service initial requests (completion, location) upon starting as well as time to first diagnostics. Completion results will include a workspace indexing progress message until the server has finished indexing.
 --]]
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local cmp = require('cmp')
@@ -50,18 +49,21 @@ cmp.setup {
       require('luasnip').lsp_expand(args.body)
     end,
   },
+
   formatting = {
+    fields = { "abbr","kind", "menu", },
     format = function(entry, vim_item)
       -- Kind icons
       vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
 
       vim_item.menu = ({
-        buffer = "[Buffer]",
-        nvim_lsp = "[LSP]",
-        luasnip = "[LuaSnip]",
-        nvim_lua = "[Lua]",
-        latex_symbols = "[Latex]",
-      })[entry.source.name]
+            buffer = "[Buffer]",
+            nvim_lsp = "[LSP]",
+            luasnip = "[LuaSnip]",
+            nvim_lua = "[Lua]",
+            path = "[Path]",
+            latex_symbols = "[Latex]",
+          })[entry.source.name]
 
       return vim_item
     end
