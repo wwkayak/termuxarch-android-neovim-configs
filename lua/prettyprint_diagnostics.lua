@@ -1,5 +1,3 @@
---DO this, to get a better understanding.
-
 -- diagnostic structure
 --[[
 
@@ -39,18 +37,27 @@
 unused      = 3
 local diags = vim.diagnostic.get(0)
 local data  = diags[1].user_data
-table.insert(data, { { "tom", 60 }, { "Bob", 32 }, { "wow" } })
+table.insert(data, {
+  { name = "tom",  age = 60 },
+  { name = "Bob",  age = 32 },
+  { name = "Shaq", age = 54 },
+}) 
 Depth = 0
 
 Print_table = function(t)
-  for k, v in pairs(t) do
-    print(type(k), type(v))
-    if type(v) == "table" then
-      print("==========", k .. "(" .. #v .. ")")
-      Print_table(v)
-    else
-      if type(k) == "string" then
-        print(k .. " = " .. v)
+  for i = 1, #t do
+    for k, v in pairs(t[i]) do
+      if k == "user_data" then
+        print(k, ": ")
+        for l = 1, #v do
+          for m = 1, #v[l] do
+            for n, a in pairs(v[l][m]) do
+              print("  ", n, a)
+            end
+          end
+        end
+      else
+        print(k, ": ", v)
       end
     end
   end

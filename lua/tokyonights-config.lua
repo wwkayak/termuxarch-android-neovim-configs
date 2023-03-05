@@ -9,5 +9,9 @@ require("tokyonight").setup(
       }
     end,
 
+    on_color = function(color)
+      TabLine = { bg = "#8888ff", fg = color.fg_gutter }
+    end
+
   }
 )

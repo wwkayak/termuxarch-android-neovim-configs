@@ -14,7 +14,7 @@ local options = {
   spell = true,
   spelllang="en_us",
   -- binccommand = "split",
-  showtabline = 2
+  showtabline = 2,
 }
 
 

@@ -5,6 +5,8 @@ vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = 0 })
 vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, { buffer = 0 })
 vim.keymap.set('n', '<leader>gt', vim.lsp.buf.type_definition, { buffer = 0 })
 vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, { buffer = 0 })
+vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename , { buffer = 0 })
+
 
 
 -- LUA LSP Setup --
@@ -18,7 +20,7 @@ require('lspconfig').lua_ls.setup {
     on_attach = function()
       print("lua-language-server connected to Neovim LSP :)")
       vim.keymap.set('n', 'ff', '<cmd>lua vim.lsp.buf.format()<cr>', opts)
-      vim.keymap.set('n', 'rr', '<cmd>luafile %<cr>', opts)
+      vim.keymap.set('n', 'rr', '<ESC>:w<cr><cmd>luafile %<cr>', opts)
     end,
 
     settings = {
@@ -48,6 +50,8 @@ require('lspconfig').lua_ls.setup {
     },
 }
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded", })
+
+
 -- GO LSP Setup -- (nothing yet)
 require('lspconfig').gopls.setup {
     on_attach = function()
