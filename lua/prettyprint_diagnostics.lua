@@ -33,16 +33,27 @@
 --  if index is numeric...
 --    if table, call print table
 --  else print value
---
-unused      = 3
+
+unsed = 3
 local diags = vim.diagnostic.get(0)
-local data  = diags[1].user_data
-table.insert(data, {
-  { name = "tom",  age = 60 },
-  { name = "Bob",  age = 32 },
-  { name = "Shaq", age = 54 },
-}) 
-Depth = 0
+
+local my_data  = {}
+my_data[1] = {}
+my_data[1]["name"] = "Tom"
+my_data[1]["age"] = 60
+my_data[1]["icon"] = " "
+ 
+my_data[2] = {}
+my_data[2]["name"] = "Bob"
+my_data[2]["age"] = 47
+my_data[2]["icon"] = " "
+
+my_data[3] = {}
+my_data[3]["name"] = "Shaq Jr."
+my_data[3]["age"] = 19
+my_data[3]["icon"] = " "
+
+table.insert(diags[1].user_data, my_data)
 
 Print_table = function(t)
   for i = 1, #t do
@@ -51,29 +62,17 @@ Print_table = function(t)
         print(k, ": ")
         for l = 1, #v do
           for m = 1, #v[l] do
+            local str = "  "
             for n, a in pairs(v[l][m]) do
-              print("  ", n, a)
+              str = str .. n .. " = " .. a .. ", "
             end
+            print(str)
           end
         end
       else
         print(k, ": ", v)
       end
     end
-  end
-end
-
-Get_padding = function(depth)
-  local spaces = ""
-  for _ = 1, depth do
-    spaces = spaces .. " "
-  end
-  return spaces
-end
-
-Print_array = function(array)
-  for i = 1, #array do
-    print(array[i])
   end
 end
 
