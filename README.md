@@ -4,13 +4,24 @@ DON'T USE THIS I HAVE NO CLUE WHAT IM DOING YET 😀
 
 So far I've really only setup everything for Lua, but it seems to be working,
 other than some weird quirks that I am assuming is because it's ON My PHONE! ;)
-<div align="center">
 
-<sub>Wanted codicons for my virtual_text diagnostics icons, but the only way I
+### UPDATE:
+* Wanted codicons for my virtual_text diagnostics icons, but the only way I
 found was to change the neovim code: /runtim/lua/vim/diagnostics.lua.
 
-I added a list of icons, and changed where the get_virtual_chunks function set
-the prefix for each diagnostic in line_diagnostics</sub>
+* I added a list of icons, and changed where the get_virtual_chunks function set
+the prefix for each diagnostic in line_diagnostics:
+```
+local signs = {" ", " ", " ", " " }
+
+1059   for i = 1, #line_diags - 1 do
+1060     prefix = signs[line_diags[i].severity]
+1061     table.insert(virt_texts, { prefix, virtual_text_highlight_map[line_diags[i].severity] })
+1062   end
+1063   local last = line_diags[#line_diags]
+
+```
+<div align="center">
 
 <sub>Debugging in Neovim with TermuxArch on Android</sub>
 ![Debugging](images/nvim-android-debug.jpg?raw=true)
